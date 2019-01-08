@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Sections extends Model
 {
-    protected $table = 'table_sections_category';
+    protected $table = 'sections';
 
     protected $fillable = ['name'];
     protected $hidden = [
