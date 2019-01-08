@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Parabus",
+        "parent" : "Mobiliario Urbano"
+    },
+    {
+        "name": "Bancas",
+        "parent" : "Mobiliario Urbano"
+    },
+    {
+        "name": "Bici Rack",
+        "parent" : "Mobiliario Urbano"
+    },
+    {
+        "name": "Bolardo",
+        "parent" : "Mobiliario Urbano"
+    },
+    {
+        "name": "Ciclo Puerto",
+        "parent" : "Mobiliario Urbano"
+    },
+    {
+        "name": "Botes",
+        "parent" : "Mobiliario Urbano"
+    },
+    {
+        "name": "Tablero basketball",
+        "parent" : "Mobiliario Urbano"
+    },
+    {
+        "name": "Mesas de picnic",
+        "parent" : "Mobiliario Urbano"
+    },
+    {
+        "name": "Escaladores",
+        "parent" : "Juegos Infantiles"
+    },
+    {
+        "name": "Juegos",
+        "parent" : "Juegos Infantiles"
+    },
+    {
+        "name": "Gimnasio para adultos",
+        "parent" : "Gimnasio al aire libre "
+    },
+    {
+        "name": "Gimnasio y juegos silla de ruedas",
+        "parent" : "Gimnasio al aire libre "
+    }
+]
