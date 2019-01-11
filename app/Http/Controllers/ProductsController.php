@@ -77,33 +77,43 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    // public function update(Request $request, $id)
+    // {
 
 
-        $product= Products::find($id);
+    //     $product= Products::find($id);
 
 
 
-        if($request->hasFile('imgurl')){
-            Storage::delete($product->imgurl);
-            $product->name = $request->input("name");
-            $product->description = $request->input("description");
-            $product->section = $request->input("section");
-            $product->category = $request->input("category");
-            $product->imgurl = $request->imgurl->store('');
-            $product->save();
-        }else{
-            $product->name = $request->input("name");
-            $product->description = $request->input("description");
-            $product->section = $request->input("section");
-            $product->category = $request->input("category");
-            $product->save();
-        }
+    //     if($request->hasFile('imgurl')){
+    //         Storage::delete($product->imgurl);
+    //         $product->name = $request->input("name");
+    //         $product->description = $request->input("description");
+    //         $product->section = $request->input("section");
+    //         $product->category = $request->input("category");
+    //         $product->imgurl = $request->imgurl->store('');
+    //         $product->save();
+    //     }else{
+    //         $product->name = $request->input("name");
+    //         $product->description = $request->input("description");
+    //         $product->section = $request->input("section");
+    //         $product->category = $request->input("category");
+    //         $product->save();
+    //     }
 
-        return response()->json($product,200);
+    //     return response()->json($product,200);
+    // }
+    public function update (Request $request, $id) {
+        $product = Products::find($id);
+
+        $product->name = $request->input("name");
+        $product->description = $request->input("description");
+        $product->section = $request->input("section");
+        $product->category = $request->input("category");
+        $product->notes = $request->input('notes');
+        $product->save();
+
     }
-
     /**
      * Remove the specified resource from storage.
      *
