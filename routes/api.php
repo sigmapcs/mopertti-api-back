@@ -46,10 +46,10 @@ Route::post('add-files-produts','ProductsController@saveAll');
 
 
 
-Route::post('products/{id}', 'productsController@update');
+Route::post('products/edit/{id}', 'ProductsController@update');
 Route::post('sections/{id}', 'SectionsController@update');
 Route::post('categories/{id}', 'CategoriesController@update');
 Route::post('sections', 'SectionsController@store');
 Route::post('categories', 'CategoriesController@store');
-Route::post('products', 'productsController@store');
+Route::post('products', 'ProductsController@store');
 
