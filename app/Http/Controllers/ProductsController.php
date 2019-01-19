@@ -39,7 +39,7 @@ class ProductsController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        $data['imgurl'] = $request->imgurl->store('');
+        // $data['imgurl'] = $request->imgurl->store('');
 
         $product = Products::create($data);
 
