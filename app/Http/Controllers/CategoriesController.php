@@ -13,10 +13,16 @@ class CategoriesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $categories = Categories::get();
+
+        if($request->has('parent')){
+            $products = $products -> where('parent',$request->get('parent'));
+        }
+
         return response()->json($categories, 200);
+
     }
 
     /**
