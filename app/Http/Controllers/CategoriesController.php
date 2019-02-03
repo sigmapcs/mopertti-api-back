@@ -123,4 +123,9 @@ class CategoriesController extends Controller
         $categories =  Categories::get();
         return response()->json($categories, 200);
     }
+    public function getGroup($id)
+    {
+        $categories = Categories::where('parent', $id);
+        return response()->json($categories,200);
+    }
 }

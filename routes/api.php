@@ -47,6 +47,8 @@ Route::post('add-files-produts','ProductsController@saveAll');
 
 
 Route::post('products/edit/{id}', 'ProductsController@update');
+Route::get('productos/categoria/{id}', 'ProductsController@getGroup');
+Route::get('categorias/seccion/{id}', 'CategoriesController@getGroup');
 Route::post('sections/{id}', 'SectionsController@update');
 Route::post('categories/{id}', 'CategoriesController@update');
 Route::post('sections', 'SectionsController@store');

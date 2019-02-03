@@ -127,4 +127,10 @@ class ProductsController extends Controller
         $product->delete();
         return response()->json(["sucess"=>"Producto Eliminado con éxito id ".$id],200);
     }
+
+    public function getGroup($id)
+    {
+        $products = Products::where('category', $id);
+        return response()->json($products,200);
+    }
 }
