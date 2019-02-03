@@ -18,7 +18,7 @@ class CategoriesController extends Controller
         $categories = Categories::get();
 
         if($request->has('parent')){
-            $products = $products -> where('parent',$request->get('parent'));
+            $categories = $products -> where('parent',$request->get('parent'));
         }
 
         return response()->json($categories, 200);
